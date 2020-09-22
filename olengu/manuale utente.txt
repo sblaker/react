@@ -1,0 +1,33 @@
+OLENGU
+Il sito web non è hostato ed è, al momento, pensato per essere eseguito in locale. Per il backend abbiamo creato delle REST api usando nodeJS ed Express. Il server sta in ascolto
+sulla porta 3500 del localhost. Come database abbiamo usato mysql.
+
+I vari moduli del backend:
+
+server.js:   Node ed Express, connessione al database + route per il caricamento delle immagini
+
+routes.js	(percorso: backend/routes.js)	modulo con tutte le routes delle rest. Vi saranno anche delle route non implementate nel sito, in quanto sono state scritte
+in fase di sviluppo, per noi.
+
+methods.js	(percorso: backend/methods.js)	modulo contenente le funzioni associate alle routes. Passa i dati al dbms e ritorna i json.
+
+dbms.js		(percorso: backend/dbms.js)	esegue le query al database e ritorna i risultati.
+
+
+db.js		(percorso: backend/db.js)	connessione al db
+
+la directory "/pictures" contiene le foto presenti nel sito
+
+Per avviare il server e mettere il backend in esecuzione, eseguire "node server.js" nella directory "/backend". Si assume che si sia già installato nodeJS e npm e che sia stato già creato
+il package.json con il comando "npm init". Le librerie di terze parti necessarie al corretto funzionamento del backend sono: express, cors, express-fileupload.
+
+Per modificare i dati di accesso al database inserire le credenziali in db.js
+
+FRONTEND	
+
+Per il frontend abbiamo usato ReactJS, abbiamo realizzato le viste in jsx implementando Bootstrap nativo, sia elementi di react-bootstrap. 
+
+Le librerie necessarie per il corretto funzionamento del frontend sono: axios, react-router-dom, react-router, react-dom, react-scripts.
+
+Nella directory "/src" del frontend e nelle rispettive sottodirectory si troveranno tutti i moduli react creati. In App.js, vi saranno definite tutte le routes, la creazione della 
+sessione ed altre funzioni riguardanti la gestione del login. La funzionalità dei vari moduli è esplicativa rispetto ai corrispettivi nomi.
